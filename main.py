@@ -31,7 +31,7 @@ I just wanted you to know that you're special to me.
 I hope your birthday is gentle, happy, and filled with the kind of moments you enjoy most. 
 You deserve to be cared for and appreciated, today and always. ✨
             
-Enjoy your gift, darling. You deserve it all and more ❤️
+Enjoy your GIFT, darling. You deserve it all and more ❤️
             
 -YOUR SECRET BFF 😊
 
@@ -47,10 +47,9 @@ def animatation(x):
 suprise = st.button("Suprise", width="stretch", type="primary")
 
 if "run_once" not in st.session_state:
-    st.session_state.run_once = False
-elif not st.session_state.run_once:
-    st.balloons()
     st.session_state.run_once = True
-if suprise:
-    st.video("https://www.youtube.com/watch?v=JSuS-zXMVwE")
+if st.session_state.run_once:
+    st.balloons()
+    st.session_state.run_once = False
+
     
